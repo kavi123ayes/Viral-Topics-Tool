@@ -21,7 +21,7 @@ keywords = [
 "Stories for Sleep", "Horror Stories for Winter Night", "True Horror Stories", "Scary Horror Story from Reddit", 
 "Disturbing True Horror Stories", "Horror Story Real", "True Scary Stories", 
 "Reddit Horror Story", "R/creepypasta", "Haunting Stories", 
-"Reddit Nightmare Stories", "Night i cant forget", "Reddit Chilling Horror Stories", "Scary Stories for Sleep", 
+"Reddit Nightmare Stories", "Night i cant forget", "Reddit Chilling Horror Stories", "Scary Stories for Sleep", "True Crime Stories","Serial Killer Stories",
 "True Winter Horror Stories"
 ]
 
@@ -93,14 +93,14 @@ if st.button("Fetch Data"):
                 views = int(stat["statistics"].get("viewCount", 0))
                 subs = int(channel["statistics"].get("subscriberCount", 0))
 
-                # Append all results without subscriber limit
-                all_results.append({
-                    "Title": title,
-                    "Description": description,
-                    "URL": video_url,
-                    "Views": views,
-                    "Subscribers": subs
-                })
+                if subs < 5000:  # Only include channels with fewer than 5,000 subscribers
+                    all_results.append({
+                        "Title": title,
+                        "Description": description,
+                        "URL": video_url,
+                        "Views": views,
+                        "Subscribers": subs
+                    })
 
         # Display results
         if all_results:
@@ -115,7 +115,8 @@ if st.button("Fetch Data"):
                 )
                 st.write("---")
         else:
-            st.warning("No results found.")
+            st.warning("No results found for channels with fewer than 5,000 subscribers.")
 
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
