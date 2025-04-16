@@ -16,13 +16,12 @@ days = st.number_input("Enter Days to Search (1-30):", min_value=1, max_value=30
 
 # List of broader keywords
 keywords = [
- "Terrifying Horror Stories", "Reddit Horror Stories", "Reddit Scary Stories", "Reddit Real Horror Stories", 
+ "Reddit Horror Stories", "Reddit Scary Stories", "Reddit Real Horror Stories", 
 "Reddit Horror Story", "Horror Stories", "Horror Story", "Creepy pasta", "Scary Stories", 
-"Stories for Sleep", "Horror Stories for Winter Night", "True Horror Stories", "Scary Horror Story from Reddit", 
+"Stories for Sleep", "True Horror Stories", "Scary Horror Story from Reddit", 
 "Disturbing True Horror Stories", "Horror Story Real", "True Scary Stories", 
 "Reddit Horror Story", "R/creepypasta", "Haunting Stories", 
-"Reddit Nightmare Stories", "Night i cant forget", "Reddit Chilling Horror Stories", "Scary Stories for Sleep", "True Crime Stories","Serial Killer Stories",
-"True Winter Horror Stories"
+"Reddit Nightmare Stories", "Reddit Chilling Horror Stories", "Scary Stories for Sleep", "True Crime Stories","Serial Killer Stories"
 ]
 
 # Fetch Data Button
